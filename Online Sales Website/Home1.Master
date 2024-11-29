@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home1.master.cs" Inherits="Online_Sales_Website.Home1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mobilewala
+        
+    
+    </title>
+    <style>
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .card:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+
+    <link rel="stylesheet" href="~/css/sites.css"/>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+                        <nav class="navbar">
+    <div class="navbar-left">
+        
+        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home/Home.aspx">
+        <asp:Image ID="Image4" runat="server" ImageUrl="~/Product/logo12.png" Height="90" Width="150"/>
+    </asp:LinkButton>
+      
+    </div>
+    <div class="navbar-right">
+        <asp:Button ID="btnlogin" CssClass="nav-button" runat="server" Text="Login" OnClick="Button1_Click" />
+        <asp:Button ID="btnaccount" CssClass="nav-button" runat="server" Text="Account" OnClick="ProfileButton_Click" />
+        <asp:Button ID="btncart" CssClass="nav-button" runat="server" OnClick="btncart_Click" Text="🛒Cart" />
+        <asp:Button ID="btnlogout" CssClass="nav-button" runat="server" OnClick="btnlogout_Click" Text="Logout" />
+    </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [cart_product]"></asp:SqlDataSource>
+</nav>
+
+
+
+        <!-- Cards Section -->
+        
+        
+           
+       
+            <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+         <!-- About Us -->
+ <footer class="about-us">
+     <h2>About Us</h2>
+     <p>We are a team of passionate individuals committed to delivering the best services. Contact us via:</p>
+     <ul>
+         <li><a href="#">📧 Email</a></li>
+         <li><a href="#">📞 Phone</a></li>
+         <li><a href="#">🌐 Website</a></li>
+     </ul>
+ </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,266 @@
+﻿/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    justify-content: space-between; /* Space between left and right containers */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center; /* Align items vertically in the left container */
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    margin-right: 0px; /* Space between logo and search bar */
+    padding: 0px;
+}
+
+.navbar .search-bar {
+    margin-left: 50px;
+    width: 500px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-button {
+    margin: 0 5px;
+    margin-left: 50px;
+    padding: 5px 10px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+    .navbar .nav-button:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+
+/* Image Links */
+.image-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.image-link {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+    .image-link img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .image-link p {
+        margin-top: 10px;
+        font-size: 1em;
+    }
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px; /* Padding around cards */
+    gap: 20px; /* Space between cards */
+}
+
+/* Card Styling */
+.card {
+    background: white; /* Card background color */
+    border: 1px solid #ddd; /* Light border around the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 20px; /* Padding inside the card */
+    width: 600px; /* Fixed width for cards */
+    display: flex;
+    flex-direction: column; /* Stack label and textbox vertically */
+    gap: 10px; /* Space between label and textbox */
+    box-sizing: border-box; /* Include padding in width */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background and shadow */
+}
+
+    /* Hover Effect for Cards */
+    .card:hover {
+        background-color: #f1f1f1; /* Light gray background on hover */
+        box-shadow: 0 6px 12px #A855F7; /* Darker shadow on hover */
+        transform: scale(1.02); /* Slightly enlarge the card */
+    }
+
+/* Card Label Styling */
+.card-label {
+    font-size: 16px; /* Font size for labels */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark text color */
+}
+
+/* Card Textbox Styling */
+.card-textbox {
+    width: 100%; /* Full width of the card */
+    padding: 8px; /* Padding inside the textbox */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border color */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+    .card-textbox:focus {
+        border-color: #4CAF50; /* Highlight border color on focus */
+        outline: none; /* Remove default outline */
+    }
+
+
+/* About Us */
+.about-us {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+    .about-us h2 {
+        margin-bottom: 10px;
+    }
+
+    .about-us p {
+        margin-bottom: 10px;
+    }
+
+    .about-us ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .about-us li {
+        margin: 5px 0;
+    }
+
+    .about-us a {
+        text-decoration: none;
+        color: #333;
+    }
+
+        .about-us a:hover {
+            color: #007BFF;
+        }
+.content {
+    margin: 300px 0; /* Adjust margin-top to avoid content overlapping with the fixed navbar */
+    padding: 20px;
+    text-align: center;
+}
+.welcome-label {
+    display: inline-block;
+    padding: 20px;
+    font-size: 2em;
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Space above the button */
+    margin-bottom:40px;
+}
+
+/* Majestic Button Styling */
+.majestic-button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Warm gradient background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Allow margin */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.4s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Prominent shadow */
+}
+
+    .majestic-button:hover {
+        background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+        transform: scale(1.05); /* Slightly enlarge the button */
+    }
+
+    .majestic-button:active {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient stays same on click */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Inset shadow on click */
+        transform: scale(1); /* No scaling on click */
+    }
+
+@media (max-width: 600px) {
+    .majestic-button {
+        padding: 12px 24px; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+
+/* Centering GridView */
+.grid-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if container height is set */
+    padding: 20px; /* Padding around the GridView */
+    background-color: #f4f4f4; /* Light background for the container */
+    min-height: 80vh; /* Minimum height to center vertically */
+}
+
+/* Professional GridView Styling */
+.styled-grid {
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Max width for larger screens */
+    border-collapse: collapse; /* Collapse borders */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: white; /* White background */
+}
+
+    .styled-grid th, .styled-grid td {
+        border: 1px solid #ddd; /* Light gray border */
+        padding: 12px 15px; /* Padding in cells */
+        text-align: center; /* Center text */
+        vertical-align: middle; /* Center text vertically */
+    }
+
+    .styled-grid th {
+        background-color: #4CAF50; /* Green background for header */
+        color: white; /* White text */
+        font-weight: bold; /* Bold text */
+        text-transform: uppercase; /* Uppercase text */
+    }
+
+    .styled-grid tr:nth-child(even) {
+        background-color: #f9f9f9; /* Zebra striping */
+    }
+
+    .styled-grid tr:hover {
+        background-color: #f1f1f1; /* Highlight row on hover */
+    }
